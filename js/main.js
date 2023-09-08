@@ -1,113 +1,113 @@
-const menuItems=[
-  {
-      id: 1,
-      categoria: "cafeteria",
-      producto: "Cafe",
-      precio: 500,
-  },
-  {
-      id: 2,
-      categoria: "cafeteria",
-      producto: "Cortado",
-      precio: 550,
-  },
-  {
-      id: 3,
-      categoria: "cafeteria",
-      producto: "Te",
-      precio: 500,
-  },
-  {
-      id: 4,
-      categoria: "cafeteria",
-      producto: "Tostados",
-      precio: 1000,
-  },
-  {
-      id: 5,
-      categoria: "cafeteria",
-      producto: "Medialunas",
-      precio: 200,
-  },
-  {
-      id: 6,
-      categoria: "almuerzos",
-      producto: "Hamburguesa simple",
-      precio: 1200,
-  },
-  {
-      id: 7,
-      categoria: "almuerzos",
-      producto: "Hamburguesa completa",
-      precio: 1700,
-  },
-  {
-      id: 8,
-      categoria: "almuerzos",
-      producto: "Sandwich Milanesa simple",
-      precio: 1300,
-  },
-  {
-      id: 9,
-      categoria: "almuerzos",
-      producto: "Sandwich Milanesa completo",
-      precio: 1900,
-  },
-  {
-      id: 10,
-      categoria: "almuerzos",
-      producto: "Sandwich Vegan",
-      precio: 1500,
-  },
-  {
-      id: 11,
-      categoria: "bebidas",
-      producto: "Agua mineral",
-      precio: 500,
-  },
-  {
-      id: 12,
-      categoria: "bebidas",
-      producto: "Gaseosas",
-      precio: 800,
-  },
-  {
-      id: 13,
-      categoria: "bebidas",
-      producto: "Cerveza Andes",
-      precio: 900,
-  },
-  {
-      id: 14,
-      categoria: "bebidas",
-      producto: "Cerveza artesanal",
-      precio: 1100,
-  },
-  {
-      id: 15,
-      categoria: "postres",
-      producto: "Flan",
-      precio: 1100,
-  },
-  {
-      id: 16,
-      categoria: "postres",
-      producto: "Ensalada de frutas",
-      precio: 1100,
-  },
-  {
-      id: 17,
-      categoria: "postres",
-      producto: "Helado",
-      precio: 1100,
-  },
-  {
-      id: 18,
-      categoria: "postres",
-      producto: "Porcion Torta",
-      precio: 1100,
-  },
-]
+// const menuItems=[
+//   {
+//       id: 1,
+//       categoria: "cafeteria",
+//       producto: "Cafe",
+//       precio: 500,
+//   },
+//   {
+//       id: 2,
+//       categoria: "cafeteria",
+//       producto: "Cortado",
+//       precio: 550,
+//   },
+//   {
+//       id: 3,
+//       categoria: "cafeteria",
+//       producto: "Te",
+//       precio: 500,
+//   },
+//   {
+//       id: 4,
+//       categoria: "cafeteria",
+//       producto: "Tostados",
+//       precio: 1000,
+//   },
+//   {
+//       id: 5,
+//       categoria: "cafeteria",
+//       producto: "Medialunas",
+//       precio: 200,
+//   },
+//   {
+//       id: 6,
+//       categoria: "almuerzos",
+//       producto: "Hamburguesa simple",
+//       precio: 1200,
+//   },
+//   {
+//       id: 7,
+//       categoria: "almuerzos",
+//       producto: "Hamburguesa completa",
+//       precio: 1700,
+//   },
+//   {
+//       id: 8,
+//       categoria: "almuerzos",
+//       producto: "Sandwich Milanesa simple",
+//       precio: 1300,
+//   },
+//   {
+//       id: 9,
+//       categoria: "almuerzos",
+//       producto: "Sandwich Milanesa completo",
+//       precio: 1900,
+//   },
+//   {
+//       id: 10,
+//       categoria: "almuerzos",
+//       producto: "Sandwich Vegan",
+//       precio: 1500,
+//   },
+//   {
+//       id: 11,
+//       categoria: "bebidas",
+//       producto: "Agua mineral",
+//       precio: 500,
+//   },
+//   {
+//       id: 12,
+//       categoria: "bebidas",
+//       producto: "Gaseosas",
+//       precio: 800,
+//   },
+//   {
+//       id: 13,
+//       categoria: "bebidas",
+//       producto: "Cerveza Andes",
+//       precio: 900,
+//   },
+//   {
+//       id: 14,
+//       categoria: "bebidas",
+//       producto: "Cerveza artesanal",
+//       precio: 1100,
+//   },
+//   {
+//       id: 15,
+//       categoria: "postres",
+//       producto: "Flan",
+//       precio: 1100,
+//   },
+//   {
+//       id: 16,
+//       categoria: "postres",
+//       producto: "Ensalada de frutas",
+//       precio: 1100,
+//   },
+//   {
+//       id: 17,
+//       categoria: "postres",
+//       producto: "Helado",
+//       precio: 1100,
+//   },
+//   {
+//       id: 18,
+//       categoria: "postres",
+//       producto: "Porcion Torta",
+//       precio: 1100,
+//   },
+// ]
 
 
 const nuestroMenu = document.getElementById("menu");
@@ -131,7 +131,14 @@ const nuestroMenu = document.getElementById("menu");
         </div>
       `;
       nuestroMenu.appendChild(menuItem);
-    })
+      })
+      const agregarButtons = nuestroMenu.querySelectorAll("agregarBtn");
+      
+      agregarButtons.forEach(button =>{
+        button.addEventListener("click", ()=>{
+          miPedido(categoriaItems)
+        })
+      })
     });
   }
   // funcion para tomar pedidos y los guardo en el div creado donde va a estar el nombre y el precio del producto y un boton para eliminar el producto si no desea ordenarlo.
@@ -155,16 +162,18 @@ const nuestroMenu = document.getElementById("menu");
     misPedidos.innerHTML += `<p class="miOrden">Mi orden: $${total}</p>`; // muestra el total de los productos seleccionados
   }
  //en el menu de la categoria seleccionada, cuando clickea en el boton agregar, se guarda el item seleccionado
-  nuestroMenu.addEventListener("click", event => {
-    if (event.target.classList.contains("agregarBtn")) {
+ 
+    function miPedido(categoriaItems){
       const itemId = parseInt(event.target.getAttribute("data-id"));
-      const seleccionItem = menuItems.find(item => item.id === itemId);
+      const seleccionItem = categoriaItems.find(item => item.id === itemId);
       const miPedido = JSON.parse(localStorage.getItem("miPedido") || "[]");
       miPedido.push(seleccionItem);
       localStorage.setItem("miPedido", JSON.stringify(miPedido));
       tomarPedido();
     }
-  });
+
+
+
   // elimina item seleccionado
   misPedidos.addEventListener("click", event => {
     if (event.target.classList.contains("eliminarBtn")) {
