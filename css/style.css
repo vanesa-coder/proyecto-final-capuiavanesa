@@ -1,0 +1,136 @@
+body{
+    background-image: url(/imagenes/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-color: #423226; */
+    background-color: #e4b77d;
+}
+
+h1{
+    font-size: 68px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.elMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.elMenu h2{
+    text-align: center;
+    font-size: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    margin-top: 20px;
+}
+@media(max-width:700px){
+    .elMenu h2{
+        font-family: 48px;
+        margin-top: 66px;
+        margin-bottom: 10px;
+        color: white;
+    }
+}
+
+.categoria{
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:700px){
+    .categoria{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.categorias{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+    background-color: coral;
+    margin: 10px;
+}
+
+.miOrden{
+    font-size: 30px;
+    text-align: center;
+    background-color: #31261e;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+    padding-top: 15px;
+    margin: auto;
+    margin-top: 40px;
+}
+.agregarBtn{
+    background-color: #f2780f;
+    width: 88px;
+    height: 23px;
+    border-radius: 15px;
+    /* margin-top: 28px; */
+   margin-left: 100px;
+   margin-bottom: 5px;
+}
+
+.lista{
+    /* display: flex; */
+    background-color: #f0cc9e;
+    justify-content: center;
+    width: 300px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.lista p{
+    font-size: 20px;
+}
+.eliminar{
+    display: flex;
+    background-color: #31261e;
+    width: 320px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 11px;
+    margin: auto;
+}
+.eliminar p{
+    color: white;
+    font-size: 20px;
+}
+.eliminarBtn{
+    background-color: #b92020;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+}
+.confirmarPedido{
+    font-size: 25px;
+    text-align: center;
+    background-color: coral;
+    color: black;
+    width: 250px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: auto;
+}
+.confPedido{
+    text-align: center;
+    margin-top: 5px;
+}
