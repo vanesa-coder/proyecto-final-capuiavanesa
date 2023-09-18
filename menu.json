@@ -45,25 +45,25 @@
         "id": 8,
         "categoria": "almuerzos",
         "producto": "Sandwich Milanesa simple",
-        "precio": 1300
+        "precio": 1500
     },
     {
         "id": 9,
         "categoria": "almuerzos",
         "producto": "Sandwich Milanesa completo",
-        "precio": 1900
+        "precio": 2100
     },
     {
         "id": 10,
         "categoria": "almuerzos",
         "producto": "Sandwich Vegan",
-        "precio": 1500
+        "precio": 1700
     },
     {
         "id": 11,
         "categoria": "bebidas",
         "producto": "Agua mineral",
-        "precio": 500
+        "precio": 600
     },
     {
         "id": 12,
@@ -87,13 +87,13 @@
         "id": 15,
         "categoria": "postres",
         "producto": "Flan",
-        "precio": 1100
+        "precio": 900
     },
     {
         "id": 16,
         "categoria": "postres",
         "producto": "Ensalada de frutas",
-        "precio": 1100
+        "precio": 1000
     },
     {
         "id": 17,
@@ -105,6 +105,6 @@
         "id": 18,
         "categoria": "postres",
         "producto": "Porcion Torta",
-        "precio": 1100
+        "precio": 1300
     }
 ]
